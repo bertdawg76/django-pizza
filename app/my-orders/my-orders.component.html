@@ -1,0 +1,28 @@
+<h2 class="text-center list-group-item-heading col-md-3-offset">Pizza Orders</h2>
+<div class="container">
+<div class="row" >
+  <div class ="col-md-3 thumbnail" *ngFor="let order of orders" id="spacing">
+    <span *ngFor="let side of sides"></span>
+    <ul>
+        <li class="my-order-summary">
+          Date: {{order.order_time | date }}<br>
+          Time: {{order.order_time | date:"h:mm a"}}<br>
+          Size: {{order.size.size_type}}<br>
+          Crust: {{order.crust.crust_type}}<br>
+          Sides: {{order.sides.side_name}}<br>
+          Total: {{order.order_total | currency:'USD':true:'1.2-2'}}<br>
+
+
+          <ul>
+            <li *ngFor="let topping of order.toppings">{{topping.topping_name}}</li>
+          </ul>
+        </li>
+      <button (click)="reOrder(order)" class="btn btn-default btn-block reorder">ReOrder</button>
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+
+

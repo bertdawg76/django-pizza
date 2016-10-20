@@ -1,0 +1,8 @@
+<h2 class="text-center">Pizza Crusts</h2>
+<ul class="list-group">
+  <li *ngFor="let crust of crusts" class="list-group-item">
+    <button (click)="emit(crust)" class="btn btn-default btn-block">Price: {{crust.crust_price | currency:'USD':true:'1.2-2'}} {{crust.crust_type}}</button>
+  </li>
+</ul>
+
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>

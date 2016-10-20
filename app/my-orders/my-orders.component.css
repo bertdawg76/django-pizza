@@ -1,0 +1,35 @@
+
+.thumbnails {
+    /*text-align:center;*/
+
+    display: inline-block;
+
+
+}
+#spacing {
+    margin-left: 60px;
+    margin-top: 20px;
+    height: 300px;
+
+}
+
+
+
+ul
+{
+    list-style-type: none;
+}
+
+.reorder {
+    position:absolute;
+    bottom: 10px;
+    right: 15px;
+    padding: 10px;
+    max-width: 90%;
+    horiz-align: center;
+}
+
+.my-order-summary {
+    margin-top: 15px;
+    color: green;
+}

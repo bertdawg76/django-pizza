@@ -1,0 +1,8 @@
+<div class="container home">
+  <div class="row">
+    <pizza-topping (dataStream)="pushTopping($event)" class="col-md-3"></pizza-topping>
+    <pizza-size (dataStream)="pushSize($event)" class="col-md-3"></pizza-size>
+    <crust-type (dataStream)="pushCrust($event)" class="col-md-3"></crust-type>
+    <pizza-order [orderstuff]="order" [totalprice]="grandtotal" (dataStream)="removeTopping($event)" class="col-md-3"></pizza-order>
+  </div>
+</div>

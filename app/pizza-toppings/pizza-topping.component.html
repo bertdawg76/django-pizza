@@ -1,0 +1,8 @@
+<h2 class="text-center">Pizza Toppings</h2>
+<ul class="list-group">
+  <li *ngFor="let topping of toppings" class="list-group-item">
+    <button (click)="emit(topping)" class="btn btn-default btn-block">Price: {{topping.topping_price | currency:'USD':true:'1.2-2'}} {{topping.topping_name}}</button>
+  </li>
+</ul>
+
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>

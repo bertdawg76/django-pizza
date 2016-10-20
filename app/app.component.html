@@ -1,0 +1,24 @@
+
+<div class="container home">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <p class="navbar-brand">Willies Pizza</p>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a routerLink="/landing" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/main" routerLinkActive="active" *ngIf="isLoggedIn()">Order Pizza</a></li>
+      <li><a routerLink="/order" routerLinkActive="active" *ngIf="isLoggedIn()">My Orders</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="/register" routerLinkActive="active" *ngIf="!isLoggedIn()">Register</a></li>
+      <li><a routerLink="/login" routerLinkActive="active" *ngIf="!isLoggedIn()">Login</a></li>
+      <li><a (click)="logout()" *ngIf="isLoggedIn()">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+</div>
+

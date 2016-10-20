@@ -1,0 +1,66 @@
+/* Master Styles */
+h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+h2, h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+/*body {*/
+    /*margin: 2em;*/
+    /*background-color: lightgray;*/
+    /*!*background-image: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQXcgT_L_3j3FJrwUHTOuLATpC4ryZ4mo-MRzUG8nmmYyGAnbzv');*!*/
+    /*background-attachment: fixed;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-repeat: no-repeat;*/
+
+
+/*}*/
+
+body {
+    background: url('http://media.istockphoto.com/photos/homemade-meat-loves-pizza-picture-id483367738') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-default {
+    background: green;
+    color: #ffffff;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-primary {
+    background: darkgreen;
+    color: white;
+}
+
+.btn-default:active, .btn-default.active {
+    background: red;
+    box-shadow: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: green;
+
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.form-control:focus {
+    border-color: green;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px green;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px green;
+}

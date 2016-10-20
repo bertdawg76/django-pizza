@@ -1,0 +1,13 @@
+
+
+<route-modal [cancelUrl]="['/order']">
+  <modal-header>
+    <h1>Thank You for your order</h1>
+  </modal-header>
+  <modal-content>
+    <side-order></side-order>
+  </modal-content>
+  <modal-footer>
+    <button class="btn btn-default" [routerLink]="['/order']">Go to Orders</button>
+  </modal-footer>
+</route-modal>

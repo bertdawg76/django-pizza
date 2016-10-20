@@ -1,0 +1,26 @@
+a {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: darkgreen;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
+a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: white; /*BACKGROUND color for active*/
+    background-color: white;
+}
+
+.navbar-default {
+    background-color: white;
+    border-color: green;
+}
+
+.navbar-brand {
+    color: green;
+}
+
+
+

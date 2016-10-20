@@ -1,0 +1,52 @@
+<h2 class="text-center">Order Summary</h2>
+<div>
+
+
+  <span *ngFor="let topping of orderstuff.toppings"></span>
+
+  <ul class="list-group">
+    <li class="list-group-item">Crust: {{orderstuff.crust.crust_type}} {{orderstuff.crust.crust_price | currency:'USD':true:'1.2-2'}}</li>
+    <li class="list-group-item">Size: {{orderstuff.size.size_type}} {{orderstuff.size.size_price | currency:'USD':true:'1.2-2'}}</li>
+    <li class="list-group-item" *ngFor="let name of orderstuff.toppings_name">
+      <button (click)="emit(topping)" class="btn btn-default btn-sm">Remove</button>
+      <span class="topping">{{name.topping_name}} {{name.topping_price | currency:'USD':true:'1.2-2'}}</span></li>
+    <li class="list-group-item">Price: ${{totalprice}}</li>
+  </ul>
+</div>
+
+
+<form (ngSubmit)="addOrder(orderForm.value)" autocomplete="off" novalidate #orderForm="ngForm">
+
+  <fieldset>
+    <div class="form-field">
+      <label for="sizeInput"></label>
+
+      <input type="number" id="sizeInput" name="size" [(ngModel)]="orderstuff.size.id" required pattern="[0-9]+" style="display: none">
+
+    </div>
+
+
+    <div class="form-field">
+      <label for="crustInput"></label>
+
+      <input type="number" id="crustInput" name="crust" [(ngModel)]="orderstuff.crust.id"
+             #title="ngModel" required pattern="[0-9]+" style="display: none">
+
+    </div>
+    <div class="form-field">
+      <label for="toppingsInput"></label>
+
+      <input type="number" id="toppingsInput" name="toppings" [(ngModel)]="orderstuff.toppings" required style="display: none">
+    </div>
+
+  </fieldset>
+
+  <p>
+    <button class="btn btn-default btn-block" type="submit" [disabled]="!orderForm.valid">Submit Order</button>
+  </p>
+
+</form>
+
+
+
+

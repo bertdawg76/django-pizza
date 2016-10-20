@@ -1,0 +1,8 @@
+<h2 class="text-center">Pizza Size</h2>
+<ul class="list-group">
+  <li *ngFor="let size of sizes" class="list-group-item">
+    <button (click)="emit(size)" class="btn btn-default btn-block">Price: {{size.size_price | currency:'USD':true:'1.2-2'}} {{size.size_type}}</button>
+  </li>
+</ul>
+
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
